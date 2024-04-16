@@ -1,0 +1,53 @@
+/* Base reset for all elements to ensure consistency across browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set base styles for the body, using flex to center content both horizontally and vertically */
+body {
+  font-family: 'Arial', sans-serif; /* It's good to specify a generic font family */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Status class for displaying messages with increased readability */
+.status {
+  font-size: 1.56rem; /* Use rem units for font sizes for better scalability */
+  text-align: center;
+}
+
+/* Container class for encapsulated sections */
+.container {
+  background-color: #b0adad; /* Use hex codes for consistency */
+  padding: 2.5rem; /* Use rem for padding for consistency */
+  height: 250px;
+  width: 450px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add subtle shadow for depth */
+}
+
+/* Button to trigger state finding, with enhanced accessibility and style */
+.find-state {
+  width: 100%;
+  padding: 1.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.875rem;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.find-state:hover {
+  background-color: orangered;
+}
