@@ -1,13 +1,11 @@
-/* Base reset for all elements to ensure consistency across browsers */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Set base styles for the body, using flex to center content both horizontally and vertically */
 body {
-  font-family: 'Arial', sans-serif; /* It's good to specify a generic font family */
+  font-family: 'Arial', sans-serif; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,23 +13,23 @@ body {
   margin: 0;
 }
 
-/* Status class for displaying messages with increased readability */
+
 .status {
-  font-size: 1.56rem; /* Use rem units for font sizes for better scalability */
+  font-size: 12px; 
   text-align: center;
 }
 
-/* Container class for encapsulated sections */
+
 .container {
-  background-color: #b0adad; /* Use hex codes for consistency */
-  padding: 2.5rem; /* Use rem for padding for consistency */
+  background-color: #b0adad; 
+  padding: 2.5rem; 
   height: 250px;
-  width: 450px;
+  width: 350px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add subtle shadow for depth */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  margin-right: 100px;
 }
 
-/* Button to trigger state finding, with enhanced accessibility and style */
 .find-state {
   width: 100%;
   padding: 1.875rem;
@@ -41,7 +39,7 @@ body {
   margin-top: 30px;
   border-radius: 5px;
   border: none;
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   color: white;
   background-color: black;
   cursor: pointer;
@@ -50,4 +48,31 @@ body {
 
 .find-state:hover {
   background-color: orangered;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1120px) {
+  .container { 
+    position: fixed;
+    top: 10%;
+    height: 150px; 
+    width: 300px;
+    margin-right: 0;
+  } 
+
+  .status{
+    font-size: 10px;
+  }
+
+  .find-state {
+    padding: 10px; 
+    font-size: 10px; 
+    margin-top: 25px; 
+  }
+
+  #map{
+    display: flex;
+    flex-shrink: 0;
+    position: fixed;
+    top: 40%;
+  }
 }
